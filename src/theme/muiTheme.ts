@@ -3,10 +3,10 @@ import { createTheme } from '@mui/material/styles';
 export const cozyTheme = createTheme({
   palette: {
     primary: {
-      main: 'hsl(31, 66%, 61%)', // Warm sunset orange
-      light: 'hsl(31, 66%, 71%)',
-      dark: 'hsl(31, 66%, 51%)',
-      contrastText: 'hsl(31, 10%, 15%)',
+      main: 'hsl(25, 85%, 60%)', // Cozy pumpkin
+      light: 'hsl(25, 85%, 70%)',
+      dark: 'hsl(25, 85%, 50%)',
+      contrastText: 'hsl(25, 10%, 15%)',
     },
     secondary: {
       main: 'hsl(31, 30%, 85%)', // Cream
@@ -57,10 +57,10 @@ export const cozyTheme = createTheme({
               borderColor: 'hsl(31, 15%, 85%)',
             },
             '&:hover fieldset': {
-              borderColor: 'hsl(31, 66%, 61%)',
+              borderColor: 'hsl(25, 85%, 60%)',
             },
             '&.Mui-focused fieldset': {
-              borderColor: 'hsl(31, 66%, 61%)',
+              borderColor: 'hsl(25, 85%, 60%)',
             },
           },
         },
@@ -98,8 +98,8 @@ export const cozyTheme = createTheme({
 // Custom colors for chat bubbles
 export const chatColors = {
   userBubble: {
-    background: 'hsl(31, 66%, 61%)', // Primary orange
-    text: 'hsl(31, 10%, 15%)',
+    background: 'hsl(25, 85%, 60%)', // Cozy pumpkin
+    text: 'hsl(25, 10%, 15%)',
   },
   aiBubble: {
     background: 'hsl(31, 30%, 85%)', // Light cream

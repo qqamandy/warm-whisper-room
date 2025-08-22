@@ -132,6 +132,21 @@ export const ChatPageMui = () => {
     setActiveRoomId(newRoom.id);
   };
 
+  const handleDeleteRoom = (roomId: string) => {
+    // Don't allow deleting the last room
+    if (rooms.length <= 1) return;
+    
+    setRooms(prev => prev.filter(room => room.id !== roomId));
+    
+    // If the deleted room was active, switch to another room
+    if (activeRoomId === roomId) {
+      const remainingRooms = rooms.filter(room => room.id !== roomId);
+      if (remainingRooms.length > 0) {
+        setActiveRoomId(remainingRooms[0].id);
+      }
+    }
+  };
+
   return (
     <Box sx={{ 
       minHeight: '100vh', 
@@ -165,6 +180,7 @@ export const ChatPageMui = () => {
               onRoomChange={setActiveRoomId}
               rooms={rooms}
               onCreateRoom={handleCreateRoom}
+              onDeleteRoom={handleDeleteRoom}
             />
           </Box>
 
