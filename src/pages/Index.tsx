@@ -1,7 +1,7 @@
-import { ChatPage } from "@/components/ChatPage";
+import { ChatPageMui } from "@/components/ChatPageMui";
 
 const Index = () => {
-  return <ChatPage />;
+  return <ChatPageMui />;
 };
 
 export default Index;
